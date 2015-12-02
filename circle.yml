@@ -12,6 +12,10 @@ dependencies:
         cat ~/advent/build.log
       fi
     - echo "`date +'%Y-%m-%d %H:%M:%S'` branch=$CIRCLE_BRANCH build_number=$CIRCLE_BUILD_NUM" >> ~/advent/build.log
+    - |
+      if [ -e ~/advent/build.log ]; then
+        cat ~/advent/build.log
+      fi
 
 test:
   override:
